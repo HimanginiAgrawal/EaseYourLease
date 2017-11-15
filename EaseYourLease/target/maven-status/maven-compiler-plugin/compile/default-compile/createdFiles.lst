@@ -1,0 +1,7 @@
+sjsu\jentab\EaseYourLease\App.class
+sjsu\jentab\EaseYourLease\dao\ApartmentDAO.class
+sjsu\jentab\EaseYourLease\dao\UsersDAO.class
+sjsu\jentab\EaseYourLease\controller\BaseController.class
+sjsu\jentab\EaseYourLease\controller\FileHandlerController.class
+sjsu\jentab\EaseYourLease\dao\FlatDAO.class
+sjsu\jentab\EaseYourLease\dao\TenantsDAO.class

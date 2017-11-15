@@ -1,0 +1,45 @@
+CREATE TABLE easeyourlease.Apartment (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `apartmentName` varchar(45) NOT NULL,
+  `adressLine1` varchar(45) NOT NULL,
+  `adressLine2` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `state` varchar(45) NOT NULL,
+  `country` varchar(45) NOT NULL,
+  `code` BIGINT(5) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE easeyourlease.Flat (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `flatName` varchar(45) NOT NULL,
+  `details` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
+  `price` varchar(45) NOT NULL,
+  `availability` varchar(45) NOT NULL,
+  `apartmentId` int(11),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  FOREIGN KEY (apartmentId) REFERENCES Apartment(id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE easeyourlease.User (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  `contact` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE easeyourlease.Tenant (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `rentDate` Date NOT NULL,
+  `contact` BIGINT(12) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
