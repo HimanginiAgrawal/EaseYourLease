@@ -6,13 +6,22 @@ import javax.persistence.*;
 @Table(name = "Flat")
 public class Flat {
 
-		@Id
-		@Column(name = "id")
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private int id;
-		
-		@ManyToOne
-		@JoinColumn(name = "apartmentId")
+		private Integer id;
+
+
+
+	@ManyToOne
+		//@JoinColumn(name = "apartmentId")
 		private Apartment apartment;
 
 		private String flatName;
@@ -20,13 +29,9 @@ public class Flat {
 		private String type;
 		private String price;
 		private String availability;
-		
-		public int getId() {
-			return id;
-		}
-		public void setId(int id) {
-			this.id = id;
-		}
+
+//		public Apartment getApartment() { return apartment; }
+//		public void setApartment(Apartment apartment) { this.apartment = apartment; }
 
 		public String getFlatName() {
 			return flatName;

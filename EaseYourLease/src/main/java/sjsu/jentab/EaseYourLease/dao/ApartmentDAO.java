@@ -1,10 +1,9 @@
 package sjsu.jentab.EaseYourLease.dao;
 
-import javax.transaction.Transactional;
+import org.springframework.data.repository.CrudRepository;
+import sjsu.jentab.EaseYourLease.model.Apartment;
 
-@Transactional
-@SuppressWarnings("unchecked")
-public class ApartmentDAO {
+public interface ApartmentDAO extends CrudRepository <Apartment,Integer> {
 	
 
 }
