@@ -21,7 +21,7 @@ public class Flat {
 
 
 	@ManyToOne
-		//@JoinColumn(name = "apartmentId")
+		@JoinColumn(name = "apartmentId")
 		private Apartment apartment;
 
 		private String flatName;
@@ -29,9 +29,20 @@ public class Flat {
 		private String type;
 		private String price;
 		private String availability;
+//	private Integer apartmentId;
+//
+//
+//	public Integer getApartmentId() {
+//		return apartmentId;
+//	}
+//
+//	public void setApartmentId(Integer apartmentId) {
+//		this.apartmentId = apartmentId;
+//	}
 
-//		public Apartment getApartment() { return apartment; }
-//		public void setApartment(Apartment apartment) { this.apartment = apartment; }
+
+		public Apartment getApartment() { return apartment; }
+		public void setApartment(Apartment apartment) { this.apartment = apartment; }
 
 		public String getFlatName() {
 			return flatName;

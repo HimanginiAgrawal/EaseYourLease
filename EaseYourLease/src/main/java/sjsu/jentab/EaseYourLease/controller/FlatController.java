@@ -3,12 +3,17 @@ package sjsu.jentab.EaseYourLease.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import sjsu.jentab.EaseYourLease.model.Apartment;
+import sjsu.jentab.EaseYourLease.model.ApartmentVO;
 import sjsu.jentab.EaseYourLease.model.Flat;
+import sjsu.jentab.EaseYourLease.model.Tenant;
 import sjsu.jentab.EaseYourLease.service.ApartmentService;
 import sjsu.jentab.EaseYourLease.service.FlatService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -18,32 +23,47 @@ public class FlatController {
 	@Autowired
 	private FlatService flatService;
 
-	@RequestMapping(value = "/saveflat", method = RequestMethod.POST)
-	public String flatSave(@RequestBody Flat flat) {
-		return flatService.flatSave(flat);
-	}
+	@Autowired
+	private ApartmentService apartmentService;
+
+//	@RequestMapping(value = "/saveflat", method = RequestMethod.POST)
+//	public String flatSave(@RequestBody Flat flat) {
+//		return flatService.flatSave(flat);
+//	}
 
 	@RequestMapping(value = "/viewflat", method = RequestMethod.POST)
 	public List<Flat> flatslist(@RequestParam Integer apartmentId) {
 		return flatService.flatslist(apartmentId);
 	}
 
-	@RequestMapping(value = "/viewflattype", method = RequestMethod.GET)
+	@RequestMapping(value = "/viewflats", method = RequestMethod.GET)
 	public String viewflattypePage(@RequestParam("apartmentId")Integer apartmentId,ModelMap model) {
+		System.out.println("Apartment ID received : "+apartmentId);
+		//apartmentService.getApartment(apartmentId);
+		model.put("apartmentName",apartmentService.getApartment(apartmentId).getApartmentName());
+		model.put("apartmentid",apartmentId);
 		model.put("flats",flatService.flatslist(apartmentId));
-		return "viewflattype";
+		return "viewflats";
 	}
 
+	@RequestMapping(value = "/addflat", method = RequestMethod.GET)
+	@ModelAttribute("Flat")
+	public ModelAndView addflatPage(@RequestParam("apartmentid") Integer apartmentid,ModelMap model) {
+		model.put("apartmentid",apartmentid);
+		return new ModelAndView("addflat", "flat", new Flat());
+	}
 
+	@RequestMapping(value = "/saveFlat", method = RequestMethod.POST)
+	public ModelAndView saveFlatPage(@Valid @ModelAttribute("flat")Flat flat,
+								   BindingResult result, ModelMap model) {
+		flatService.flatSave(flat);
 
-
-
-//	@RequestMapping(value = "/viewflattype", method = RequestMethod.GET)
-//	public String viewflattypePage(ModelMap model) {
-//		model.put("flats",flatService.flatslist(1));
-//		return "viewflattype";
-//	}
-
+		Integer aid=flat.getApartment().getId();
+		System.out.println("apartmentid:" +flat.getApartment().getId());
+		model.put("flats",flatService.flatslist(aid));
+		//return "viewflats";
+		return new ModelAndView("redirect:" + "viewflats?apartmentId="+aid);
+	}
 
 	
 }

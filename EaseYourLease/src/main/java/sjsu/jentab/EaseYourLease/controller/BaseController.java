@@ -13,10 +13,15 @@ public class BaseController {
 		return "home";
 	}
 
-
-	@GetMapping("/")
-	public String getIndex() {
-		//return "index";
-		return "home";
+	@RequestMapping(value = "/images/logo.png", method = RequestMethod.GET)
+	public String logoPage(ModelMap model) {
+		return "logo";
 	}
+
+
+//	@GetMapping("/")
+//	public String getIndex() {
+//		//return "index";
+//		return "home";
+//	}
 }

@@ -1,32 +1,69 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>--%>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>First Web Application</title>
-</head>
+    <head>
+        <title>EaseYourLease</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style/easeyourlease.css"/>
+    </head>
 
-<body>
-Here are the list of Apartments:
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Address Line 1</th>
-        <th>Address Line 2</th>
-        <th>City</th>
+    <body>
+    <%--navbar begin--%>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <%--<img class="navbar-header" src="/images/logo.png" width="30" height="30">--%>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Ease Your Lease</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">My Apartments</a></li>
+                    <li><a href="#">Rent Flat</a></li>
+                    <li><a href="#">My Tenants</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <%--navbar end--%>
 
-    </tr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h1>Apartments List </h1>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-lg" type="submit" onclick="location.href='/addapartment'">Add new Apartment</button>
+                </div>
+            </div>
+            <br>
 
-<c:forEach items="${apartments}" var="apartment" >
-    <tr>
-        <td><a href="viewflattype?apartmentId"+${apartment.id}>${apartment.apartmentName}</a></td>
-        <td>${apartment.adressLine1}</td>
-        <td>${apartment.adressLine2}</td>
-        <td>${apartment.city}</td>
 
-    </tr>
-</c:forEach>
-</table>
-</body>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address Line 1</th>
+                        <th>Address Line 2</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach items="${apartments}" var="apartment" >
+                        <tr>
+                            <td><a href=${'viewflats?apartmentId='}${apartment.id}>${apartment.apartmentName}</a></td>
+                            <td>${apartment.adressLine1}</td>
+                            <td>${apartment.adressLine2}</td>
+                            <td>${apartment.city}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+        <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
 
 </html>

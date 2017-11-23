@@ -1,0 +1,18 @@
+.btn-lg{
+margin-top: 20px;
+}
+
+button:disabled,
+button[disabled]{
+    border: 1px solid #6076a4;
+    background-color: #7d93b7;
+    color: #fff;
+    cursor:not-allowed;
+
+}
+button:disabled:hover {
+    border: 1px solid #6076a4;
+    background-color: #7d93b7;
+    color: #fff;
+    cursor:not-allowed;
+}

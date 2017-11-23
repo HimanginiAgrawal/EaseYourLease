@@ -1,5 +1,7 @@
 package sjsu.jentab.EaseYourLease.model;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
 
 @Entity

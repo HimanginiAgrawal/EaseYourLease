@@ -1,6 +1,7 @@
 package sjsu.jentab.EaseYourLease.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "Tenant")
@@ -13,9 +14,22 @@ public class Tenant {
 
 		private String firstName;
 		private String lastName;
-		private String rentDate;
+		private Date rentDate;
 		private String contact;
-						
+
+
+
+
+	private Integer flatid;
+
+	public Integer getFlatid() {
+		return flatid;
+	}
+
+	public void setFlatid(Integer flatid) {
+		this.flatid = flatid;
+	}
+
 		public int getId() {
 			return id;
 		}
@@ -37,18 +51,17 @@ public class Tenant {
 			this.lastName = lastName;
 		}
 
-		public String getRentDate() {
-			return rentDate;
-		}
-		public void setRentDate(String rentDate) {
-			this.rentDate = rentDate;
-		}
-		
+		public Date getRentDate() { return rentDate; }
+		public void setRentDate(Date rentDate) { this.rentDate = rentDate; }
+
 		public String getContact() {
 			return contact;
 		}
 		public void setContact(String contact) {
 			this.contact = contact;
-		}		
+		}
+
+
+
 }
 
