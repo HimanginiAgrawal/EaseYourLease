@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
+//@RequestMapping("/secure/")
 public class ApartmentController {
 
 	@Autowired
@@ -31,10 +32,10 @@ public class ApartmentController {
 //	}
 
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/apartments", method = { RequestMethod.GET, RequestMethod.POST })
 	public String apartmentPage(ModelMap model) {
 		model.put("apartments",apartmentService.apartmentList());
-		return "viewapartments";
+		return "/secure/viewapartments";
 	}
 
 	@RequestMapping(value = "/addapartment", method = RequestMethod.GET)
