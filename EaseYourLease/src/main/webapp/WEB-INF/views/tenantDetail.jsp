@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>--%>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +64,14 @@
             </div>
 
             <%--<button type="submit" class="btn btn-primary">Login</button>--%>
+
+    <br>
+    <br>
+    <div align="center">
+        <form method="POST" action="${pageContext.request.contextPath}/pay">
+        <button type="submit" class="btn-warning" onclick="location.href='/pay'"> Pay Rent </button>
+    </form>
+</div>
 
 </div>
 <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>

@@ -16,3 +16,8 @@ button:disabled:hover {
     color: #fff;
     cursor:not-allowed;
 }
+.navbar-header-img{
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
+}
