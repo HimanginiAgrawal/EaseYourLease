@@ -1,3 +1,18 @@
+<%--<html>--%>
+<%--<head>--%>
+    <%--<title>Hello Twitter</title>--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--<h3>Connected to Twitter</h3>--%>
+
+<%--<p>--%>
+    <%--You are now connected to your Twitter account.--%>
+    <%--Click <a href="/twitterconnect">here</a> to see your Twitter friends.--%>
+<%--</p>--%>
+<%--</body>--%>
+<%--</html>--%>
+
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>--%>
@@ -33,9 +48,9 @@
 <div class="container">
     <br><br><br><br><br><br><br><br>
     <div class="row">
-    <div class="col-sm-12" align="center">
-        <label>Following message will be posted on facebook:</label>
-    </div>
+        <div class="col-sm-12" align="center">
+            <label>Following message will be posted on Twitter:</label>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-3"></div>
@@ -48,14 +63,14 @@
     <br>
     <div class="row">
         <div class="col-sm-12" align="center">
-        <button class="btn btn-primary" type="submit" onclick="location.href='/facebookconnect'">Confirm Post</button>
+            <button class="btn btn-primary" type="submit" onclick="location.href='/twitterconnect'">Confirm Tweet</button>
         </div>
     </div>
     <br>
     <br>
     <%--<div align="center">--%>
-        <%--<a href=${'apartments'}>Back to Apartment List</a>--%>
-    </div>
+    <%--<a href=${'apartments'}>Back to Apartment List</a>--%>
+</div>
 </div>
 <br>
 

@@ -62,9 +62,22 @@
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-facebook</artifactId>
-			<!--<version>3.0.0.M1</version>-->
 		</dependency>
-		<!--fb dependency begin-->
+		<!--fb dependency end-->
+
+		<!--twitter dependency begin-->
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-twitter</artifactId>
+		</dependency>
+		<!--twitter dependency end-->
+
+		<!--linkedin dependency begin-->
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-linkedin</artifactId>
+		</dependency>
+		<!--linkedin dependency end-->
 
 		<dependency>
 			<groupId>org.webjars</groupId>
