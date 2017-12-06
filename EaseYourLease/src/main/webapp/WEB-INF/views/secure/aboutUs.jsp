@@ -83,11 +83,11 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/slider-1.jpg" alt="Chicago" style="width:100%;height: 380px">
+                        <img src="images/slider-2.jpg" alt="Chicago" style="width:100%;height: 380px">
                     </div>
 
                     <div class="item">
-                        <img src="images/slider-1.jpg" alt="New york" style="width:100%;height: 380px">
+                        <img src="images/slider-3.jpg" alt="New york" style="width:100%;height: 380px">
                     </div>
                 </div>
 
