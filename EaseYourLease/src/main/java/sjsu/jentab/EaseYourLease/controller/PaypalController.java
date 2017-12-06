@@ -28,7 +28,7 @@ public class PaypalController {
     public String pay( HttpServletRequest request){
         System.out.println("*********PAYMENT CREATION STARTED*********** ");
 
-        String cancelUrl = URLUtils.getBaseURl(request) + "/" +"error";
+        String cancelUrl = URLUtils.getBaseURl(request) + "/" +"apartments";
         String successUrl = URLUtils.getBaseURl(request) + "/" + "payRent";
         System.out.println("payment cancelUrl "+cancelUrl);
         System.out.println("payment successUrl "+successUrl);

@@ -15,13 +15,14 @@
 <%--navbar begin--%>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
+        <img class="navbar-header-img" src="images/logo.jpeg" width="40" height="40">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Ease Your Lease</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">My Apartments</a></li>
-            <li><a href="#">Rent Flat</a></li>
-            <li><a href="#">My Tenants</a></li>
+            <li class="active"><a href=${'easeyourlease'}>Home</a></li>
+            <li><a href=${'apartments'}>Apartment List</a></li>
+            <li><a href=${'contactus'}>Contact US</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
@@ -70,7 +71,7 @@
 </div>
 
 
-<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="/webjars/jquery/3.2.1/jquery.min.js"></script>
 <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
