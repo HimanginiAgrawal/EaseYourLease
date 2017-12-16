@@ -71,7 +71,7 @@ public class ApartmentController {
 									BindingResult result, ModelMap model) {
 		apartmentService.apartmentSave(apartmentvo);
 		model.put("apartments",apartmentService.apartmentList());
-		return "viewapartments";
+		return "/secure/viewapartments";
 	}
 
 
