@@ -27,11 +27,12 @@ public class TenantController {
     @Autowired
     private FlatService flatService;
 
-//    @RequestMapping(value = "/rentThisApartment", method = RequestMethod.POST)
-//    public String rentThisApartment(@RequestParam("flatId")Integer flatId, ModelMap model) {
-//        model.put("flats",tenantService.flatslist(flatId));
-//        return "assigntenant";
-//    }
+/*    @RequestMapping(value = "/rentThisApartment", method = RequestMethod.POST)
+    public String rentThisApartment(@RequestParam("flatId")Integer flatId, ModelMap model) {
+        model.put("flats",tenantService.flatslist(flatId));
+        return "assigntenant";
+    }
+ */   
 
     @RequestMapping(value = "/rentapartment", method = RequestMethod.GET)
     @ModelAttribute("Tenant")
