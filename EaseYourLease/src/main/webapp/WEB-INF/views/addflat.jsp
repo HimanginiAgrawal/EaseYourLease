@@ -43,7 +43,7 @@
                     <form:label path="apartment.id">Flat Number</form:label>
                 </div>
                 <div class="col-sm-7">
-                    <%--<form:input type="text" class="form-control" path="apartment.id" value="${apartement.id}" disabled="true" />--%>
+                   
 
                 <input type="text" class="form-control"  value="${apartmentid}" disabled="disabled" />
                     <form:input type="hidden" class="form-control" path="apartment.id" value="${apartmentid}" />
