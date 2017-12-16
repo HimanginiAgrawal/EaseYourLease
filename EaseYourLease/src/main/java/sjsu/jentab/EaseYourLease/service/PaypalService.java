@@ -27,7 +27,7 @@ public class PaypalService {
             String cancelUrl,
             String successUrl) throws PayPalRESTException {
 
-        System.out.println("*********createPayment STARTED*********** ");
+        System.out.println(" ********createPayment STARTED*********** ");
 
         Amount amount = new Amount();
         amount.setCurrency(currency);
@@ -52,7 +52,7 @@ public class PaypalService {
         redirectUrls.setReturnUrl(successUrl);
         payment.setRedirectUrls(redirectUrls);
 
-        System.out.println("*********createPayment ended*********** ");
+        System.out.println(" ********createPayment ended*********** ");
         return payment.create(apiContext);
     }
 
