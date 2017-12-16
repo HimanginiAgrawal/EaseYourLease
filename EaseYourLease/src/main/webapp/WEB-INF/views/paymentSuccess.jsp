@@ -20,7 +20,8 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href=${'easeyourlease'}>Home</a></li>
             <li><a href=${'apartments'}>Apartment List</a></li>
-            <li><a href="https://public.tableau.com/profile/mudrita#!/vizhome/ApartmentAvailibility/Sheet1?publish=yes" target="_blank">Reports</a></li>
+            <li><a href="https://public.tableau.com/profile/mudrita#!/vizhome/ApartmentAvailibility/Sheet1?publish=yes" 
+                   target="_blank">Reports</a></li>
             <li><a href="http://localhost:7070" target="_blank">Jenkins</a></li>
             <li><a href=${'contactus'}>Contact US</a></li>
         </ul>
