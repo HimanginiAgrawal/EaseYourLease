@@ -1,2 +1,8 @@
 # EaseYourLease
-hello...changed localhost to IP..latest changes
+
+Members:
+•	Himangini Agrawal
+•	Mudrita Chaturvedi
+•	Avleen Singh Khanuja
+•	Abhinaya Yellipedi
+
