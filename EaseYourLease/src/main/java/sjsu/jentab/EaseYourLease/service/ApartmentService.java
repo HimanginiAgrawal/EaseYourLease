@@ -6,13 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import sjsu.jentab.EaseYourLease.dao.impl.ApartmentDAOImpl;
 import sjsu.jentab.EaseYourLease.model.Apartment;
 import sjsu.jentab.EaseYourLease.model.ApartmentVO;
-
 import java.util.List;
 
 @Service
 public class ApartmentService {
-
-
 
     @Autowired
     private ApartmentDAOImpl apartmentDAOImpl;
