@@ -18,7 +18,6 @@ public class LinkedInController {
 
     public LinkedInController(LinkedIn linkedIn, ConnectionRepository connectionRepository) {
         this.linkedIn = linkedIn;
-
         this.connectionRepository = connectionRepository;
     }
 
@@ -27,27 +26,25 @@ public class LinkedInController {
     public String helloFacebook(ModelMap model) {
         if (connectionRepository.findPrimaryConnection(LinkedIn.class) == null) {
             return "redirect:/connect/linkedin";
-
         }
+        
         String message="Test message";
-        System.out.println("*****Message*****  = "+message);
+        System.out.println(" *****Message*****  = "+message);
         ProfileOperations user = linkedIn.profileOperations();
-        System.out.println("*****profileurl*****  = "+user.getProfileId());
-        System.out.println("*****profileurl*****  = "+user.getProfileUrl());
+        System.out.println(" *****profileurl*****  = "+user.getProfileId());
+        System.out.println(" *****profileurl*****  = "+user.getProfileUrl());
         NewShare.NewShareContent shareContent = new NewShare.NewShareContent("demoTitle", "https://www.linkedin.com/in/mudrita-chaturvedi-aa844588/", "https://www.linkedin.com/in/mudrita-chaturvedi-aa844588/edit/topcard/","demo description");
-        System.out.println("*****shareContent*****  = "+shareContent.getSubmittedUrl());
+        System.out.println(" *****shareContent*****  = "+shareContent.getSubmittedUrl());
         NewShare postContent = new NewShare(message, shareContent, new NewShare.NewShareVisibility());
-        System.out.println("*****postContent*****  = "+postContent.getContent());
+        System.out.println(" *****postContent*****  = "+postContent.getContent());
         NetworkUpdateOperations networkUpdateOperations = linkedIn.networkUpdateOperations();
-        System.out.println("*****networkUpdateOperations*****  = "+networkUpdateOperations);
-
-        System.out.println("*****networkUpdateOperations*****  = "+networkUpdateOperations.toString());
+        
+        System.out.println(" *****networkUpdateOperations*****  = "+networkUpdateOperations.toString());
 
         URI uri = networkUpdateOperations.share(postContent);
 
-        System.out.println("*****networkUpdateOperations*****  = "+uri);
+        System.out.println(" *****networkUpdateOperations*****  = "+uri);
 
-        //UpdateContentStatus();
         System.out.println(user);
 
         model.addAttribute("linkedInProfile",linkedIn.profileOperations().getUserProfileFull());
