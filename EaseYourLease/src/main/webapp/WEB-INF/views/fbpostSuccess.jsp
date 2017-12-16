@@ -30,6 +30,8 @@
     </div>
 </nav>
 <%--navbar end--%>
+    
+    
 
 <div class="container">
     <div class="row">
