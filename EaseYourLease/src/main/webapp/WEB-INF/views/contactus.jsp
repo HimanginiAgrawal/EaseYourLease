@@ -21,6 +21,8 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href=${'easeyourlease'}>Home</a></li>
             <li><a href=${'apartments'}>Apartment List</a></li>
+            <li><a href="https://public.tableau.com/profile/mudrita#!/vizhome/ApartmentAvailibility/Sheet1?publish=yes" target="_blank">Reports</a></li>
+            <li><a href="http://localhost:7070" target="_blank">Jenkins</a></li>
             <li><a href=${'contactus'}>Contact US</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -103,6 +105,7 @@
 
     <%--</div>--%>
 
+
     <div class="row">
         <div class="col-sm-12">
             <div class="jumbotron">
@@ -110,24 +113,51 @@
                 <%--<img src="images/image1.png" alt="" height="150px" width="350px" align="center">--%>
                 <div class="row">
                     <div class="col-sm-4">
-                        <ul class="list-1">
-                            <li><a href="#">San Jose</a></li>
-                            <li><a href="#">San Francisco</a></li>
-                            <li><a href="#">Santa Clara</a></li>
-                            <li><a href="#">Milpitas</a></li>
-                            <li><a href="#">Mountain View</a></li>
-                            <li><a href="#">Palo Alto</a></li>
-                            <%--<li><a href="#">Palo Alto</a></li>--%>
-                        </ul>
+                        <%--<ul class="list-1">--%>
+                        <a href="#"><strong>Sunnyvale Apartments</strong></a> <br><br>
+                            <%--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.309221761434!2d-121.88326018504354!3d37.335187379841884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccb864de43d5%3A0x397ffe721937340e!2sSan+Jos%C3%A9+State+University!5e0!3m2!1sen!2sus!4v1512725414333" width="300" height="300" frameborder="2" style="border:10px" allowfullscreen></iframe>--%>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d50720.78580696665!2d-122.04093556783981!3d37.38867078673358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e3!4m3!3m2!1d37.3917438!2d-121.9815131!4m5!1s0x808fb645a9d05d3b%3A0x768dfb26dd7cc3a2!2sSunnyvale%2C+CA!3m2!1d37.368829999999996!2d-122.0363496!5e0!3m2!1sen!2sus!4v1512769388649" width="300" height="300" frameborder="2" style="border:10px" allowfullscreen></iframe>
                     </div>
                     <div class="col-sm-4">
-                        <img src="images/image1.png" alt="" height="150px" width="350px" align="center">
-                        <%--<ul class="list-1 last">--%>
-                        <%--&lt;%&ndash;<li><a href="#">Mountain View</a></li>&ndash;%&gt;--%>
-                        <%--<li><a href="#">Santa Clara</a></li>--%>
-                        <%--<li><a href="#">Milpitas</a></li>--%>
-                        <%--</ul>--%>
+                        <a href="#"><strong>San Francisco</strong></a><br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10030.996480514923!2d-122.38352326685802!3d37.618911077051045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f778c55555555%3A0xa4f25c571acded3f!2sSan+Francisco+International+Airport!5e0!3m2!1sen!2sus!4v1512725494518" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
+
                     </div>
+                    <div class="col-sm-4">
+                        <a href="#"><strong>Santa Clara</strong></a><br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50737.82101895642!2d-121.96640439544775!3d37.36348376384344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fca6f1483a0b3%3A0xa43fe74528b69173!2sSanta+Clara+Recreation+Center!5e0!3m2!1sen!2sus!4v1512725567291" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#"><strong>Milpitas</strong></a><br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.6283518672167!2d-121.91949418504055!3d37.42225837982513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc924206c58eb%3A0x4a4b8ee958f0a452!2sMilpitas+Square!5e0!3m2!1sen!2sus!4v1512725606810" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#"><strong>Mountain View</strong></a><br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.7975657749653!2d-122.07929528504147!3d37.39461937983041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7369603b7db%3A0xfc12b6c0767ac5f6!2sMountain+View+Transit+Center!5e0!3m2!1sen!2sus!4v1512725652219" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#"><strong>Palo Alto</strong></a><br><br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.8780406916403!2d-122.16388238503993!3d37.43998577982181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb3acde602c3%3A0xbb43423da1806dd8!2sPalo+Alto+Center%3A+Palo+Alto+Medical+Foundation%3A+Sutter+Health+Affiliate!5e0!3m2!1sen!2sus!4v1512725704193" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                            <%--<li><a href="#">Palo Alto</a></li>--%>
+                        <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
+                    <%--</div>--%>
+                    <%--<div class="col-sm-4">--%>
+                        <%--<img src="images/image1.png" alt="" height="150px" width="350px" align="center">--%>
+                        <%--&lt;%&ndash;<ul class="list-1 last">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;&lt;%&ndash;<li><a href="#">Mountain View</a></li>&ndash;%&gt;&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<li><a href="#">Santa Clara</a></li>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<li><a href="#">Milpitas</a></li>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
+                    <%--</div>--%>
 
                 </div>
                 <%--<div class="lists">--%>
@@ -135,25 +165,6 @@
         </div>
 
 
-        <%--<div class="col-sm-5">--%>
-            <%--<div class="jumbotron">--%>
-                <%--<h3>Search Tenant</h3>--%>
-                <%--<div class="form-group">--%>
-                    <%--<label>Enter Tenant ID</label>--%>
-                    <%--<input type="text" placeholder="Enter tenant ID"/>--%>
-                <%--</div>--%>
-                <%--<div class="form-group">--%>
-                    <%--<input type="button" class="btn-primary btn-group-sm" value="Submit" align="center">--%>
-                <%--</div>--%>
-
-                <%--<br>--%>
-                <%--<br>--%>
-                <%--<div align="center">--%>
-                    <%--<a href=${'apartments'}>Go to Apartment List</a>--%>
-                <%--</div>--%>
-
-            <%--</div>--%>
-        <%--</div>--%>
 
     </div>
 

@@ -23,6 +23,8 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href=${'easeyourlease'}>Home</a></li>
             <li><a href=${'apartments'}>Apartment List</a></li>
+            <li><a href="https://public.tableau.com/profile/mudrita#!/vizhome/ApartmentAvailibility/Sheet1?publish=yes" target="_blank">Reports</a></li>
+            <li><a href="http://localhost:7070" target="_blank">Jenkins</a></li>
             <li><a href=${'contactus'}>Contact US</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -83,11 +85,11 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/slider-1.jpg" alt="Chicago" style="width:100%;height: 380px">
+                        <img src="images/slider-2.jpg" alt="Chicago" style="width:100%;height: 380px">
                     </div>
 
                     <div class="item">
-                        <img src="images/slider-1.jpg" alt="New york" style="width:100%;height: 380px">
+                        <img src="images/slider-3.jpg" alt="New york" style="width:100%;height: 380px">
                     </div>
                 </div>
 
