@@ -31,19 +31,7 @@
 </nav>
 <%--navbar end--%>
 
-<div class="container">
-    <h3 align="right"> Welcome ${userInfo.givenName} &nbsp;</h3>
-    <hr>
-    <div class="row">
-        <div class="col-sm-9">
-            <h1>Flats List for ${apartmentName}</h1>
-        </div>
-        <div class="col-sm-3">
-            <c:set var="addflatLinks" value="${'/addflat?apartmentid='}${apartmentid}" />
-            <button class="btn btn-primary btn-lg" type="submit" onclick="location.href='${addflatLinks}'">Add new Flat</button>
-        </div>
-    </div>
-    <br>
+
 
 
     <table class="table table-hover">
